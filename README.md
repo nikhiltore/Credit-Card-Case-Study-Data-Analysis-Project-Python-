@@ -1,53 +1,68 @@
-**📘 Credit Card Data Analysis:**
-This project analyzes customer acquisition data, credit card spending patterns, and repayment behaviour to derive insights for improving profitability, customer targeting, and portfolio management.
-The analysis follows a complete data science workflow—including cleaning, feature engineering, exploratory analysis, visualization, and custom function development.
+**📊 Credit Card Case Study -Data Analysis Project (Python):**
+A complete end-to-end analysis of credit card customer behavior, spending patterns, repayments, and profitability using Python, Pandas, Matplotlib, and Seaborn.
+This project replicates the PSPD Bank Case Study and delivers a fully solved Jupyter Notebook covering data cleaning, transformations, EDA, visualizations, and business insights.
 
-**🎯 Project Objectives:**
-•	Correct invalid or extreme values using business rules
-•	Generate customer-level and city-level spending insights
-•	Evaluate monthly profitability based on spend vs repayment
-•	Identify top customers and high-spend segments
-•	Build dynamic reporting function for top customers by product & time period
+**📝 Objective**
+To analyze credit card customer behavior, spending, repayments, profitability, and segment performance using transactional and customer-level datasets.
 
-**🧹 Data Cleaning Rules Applied:**
-**Customer Acquisition-**
-•	Age < 18 → replaced with mean age.
-**Spend Data-**
-•	Spend amount > customer limit → replaced with 50% of limit.
-**Repayment Data-**
-•	Repayment > limit → capped at limit amount.
-**Common Processing-**
-•	Created Month / Year features using transaction date.
-•	Merged datasets to form a complete customer view.
-
-**📊 Key Insights & Outputs:**
-•	Count of distinct customers and categories
-•	Average monthly spend vs average monthly repayment
-•	Monthly bank profit (using 2.9% interest on positive profit only)
-•	Top 5 product types by usage
+**🔍 Key Analysis Performed:**
+**✅ 1. Data Quality Fixes**
+•	Replaced invalid customer ages (age < 18) with mean age
+•	Capped spend > credit limit at 50% of limit
+•	Capped repayment > credit limit at limit amount
+**✅ 2. Customer & Spend Insights**
+•	Count of unique customers
+•	Total number of spend categories
+•	Average monthly spend per customer
+•	Average monthly repayment per customer
+•	Monthly profit and bank interest earned
+•	Top 5 product types by card issuance
 •	City with maximum spend
-•	Age group with highest spending
-•	Top 10 customers by repayment amount
-•	Yearly city-wise spend by product
-•	Seasonality & monthly trends across products and cities
+•	Age groups contributing highest spend
+•	Top 10 customers by repayment
+**✅ 3. City-wise & Product-wise Analysis**
+•	City × Product × Year pivot summary
+•	Annual spend split by product and market segment
+•	Visual comparison across different regions
+**✅ 4. Visualizations & Trends**
+•	Monthly spend trends (city-wise)
+•	Yearly spend on air tickets category
+•	Monthly seasonality by product type
+•	Bar charts, line graphs, and facet plots for deep insights
+**✅ 5. User-Defined Function**
+Created a reusable function to fetch:
+Top 10 customers by repayment
+Filterable by product type and time period (yearly or monthly).
 
-**📈 Visualizations Included:**
-•	City-wise yearly spend by product (bar chart)
-•	Monthly spend comparison across cities (line plot)
-•	Yearly spend on air tickets (bar chart)
-•	Monthly spend trend per product (line plot)
+**📚 Dataset Description:**
+Customer Acquisition
+•	Customer ID
+•	Age
+•	City
+•	Product Type
+•	Credit Limit
+Spend
+•	Date / Month
+•	Customer ID
+•	Category
+•	Amount
+Repayment
+•	Date / Month
+•	Customer ID
+•	Amount
 
-**🛠 Custom Python Function Implemented:**
-top10_customers(product, period)
-A fully dynamic reporting function:
-•	Filters by product type (Gold, Silver, Platinum)
-•	Selects monthly or yearly time period
-•	Returns top 10 customers per city based on repayment amount
-•	Automatically aggregates and sorts results
-This allows analysts to quickly generate targeted marketing or collection lists.
-
-**🧰 Tech Stack:**
+**🛠️ Tech Stack:**
 •	Python
-•	Pandas, NumPy
-•	Matplotlib, Seaborn
+•	Pandas
+•	NumPy
+•	Matplotlib
+•	Seaborn
 •	Jupyter Notebook
+
+**📈 Results & Business Impact:**
+•	Identified high-value customer segments
+•	Mapped profitability across time periods
+•	Detected cities and product categories driving higher revenue
+•	Highlighted repayment behavior for risk evaluation
+•	Delivered visual analytics for business stakeholders
+
